@@ -6,12 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "bin": {
-  "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
   },
+  "type": "module",
   "repository": {
-    "type": "module",
     "url": "git+https://github.com/Albina-Doynikova/frontend-project-44.git"
   },
   "author": "Albina Doynikova",
@@ -19,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Albina-Doynikova/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/Albina-Doynikova/frontend-project-44#readme"
+  "homepage": "https://github.com/Albina-Doynikova/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
