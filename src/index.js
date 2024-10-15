@@ -18,6 +18,7 @@ export default (description, getQuestionAndAnswer) => {
     } else {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
         console.log(`Let's try again, ${userName}!`);
+        return;
     }
   }
   console.log(`Congratulations, ${userName}!`);
