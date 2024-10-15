@@ -5,3 +5,5 @@
 ## Запись игры
 
 Вы можете посмотреть запись игры по следующей ссылке: [Asciinema Recording](https://asciinema.org/a/uE0oYOB8lddQv3PP7VNjxboXA)
+
+Вы можете посмотреть запись игры "Калькулятор" по следующей ссылке: [Asciinema Recording](https://asciinema.org/a/xtSzCmkLHNY2FUyO5D5GZRiiO)
