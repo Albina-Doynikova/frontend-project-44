@@ -4,4 +4,4 @@
 
 ## Запись игры
 
-Вы можете посмотреть запись игры по следующей ссылке: [Asciinema Recording](https://asciinema.org/a/AcOgi5Nvb3Pzu27Fuap86GLuR)
+Вы можете посмотреть запись игры по следующей ссылке: [Asciinema Recording](https://asciinema.org/a/uE0oYOB8lddQv3PP7VNjxboXA)
