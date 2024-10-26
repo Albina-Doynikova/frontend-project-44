@@ -8,11 +8,11 @@ const gcd = (a, b) => {
   let number2 = b;
 
   while (number2 !== 0) {
-    let temp = number2;
+    const temp = number2;
     number2 = number1 % number2;
     number1 = temp;
   }
-  return Math.abs(number1); 
+  return Math.abs(number1);
 };
 
 const getQuestionAndAnswer = () => {
@@ -23,8 +23,8 @@ const getQuestionAndAnswer = () => {
   const question = randomNumbers.join(' ');
   const correctAnswer = String(gcd(a, b));
   return [question, correctAnswer];
-}
+};
 
 export default () => {
-    getStart(description, getQuestionAndAnswer)
+  getStart(description, getQuestionAndAnswer);
 };
