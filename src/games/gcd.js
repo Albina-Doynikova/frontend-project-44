@@ -9,7 +9,7 @@ const gcd = (a, b) => {
 
   while (number2 !== 0) {
     let temp = number2;
-    number2 = number1 % b;
+    number2 = number1 % number2;
     number1 = temp;
   }
   return Math.abs(number1); 
