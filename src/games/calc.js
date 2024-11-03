@@ -3,8 +3,8 @@ import getRandomInRange from '../getRandomNumber.js';
 
 const description = 'What is the result of the expression?';
 
-const calc = (operations, firstNumber, secondNumber) => {
-  switch (operations) {
+const calc = (operation, firstNumber, secondNumber) => {
+  switch (operation) {
     case '+':
       return firstNumber + secondNumber;
     case '-':
@@ -12,7 +12,7 @@ const calc = (operations, firstNumber, secondNumber) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      throw new Error(`Unknown operator: ${operations}`);
+      throw new Error(`Unknown operator: ${operation}`);
   }
 };
 
@@ -20,8 +20,8 @@ const getQuestionAndAnswer = () => {
   let firstNumber = getRandomInRange();
   let secondNumber = getRandomInRange();
   const operators = ['+', '-', '*'];
-  const operations = operators[getRandomInRange(0, operators.length - 1)];
-  if (operations === '-') {
+  const operation = operators[getRandomInRange(0, operators.length - 1)];
+  if (operation === '-') {
     if (firstNumber < secondNumber) {
       const temp = firstNumber;
       firstNumber = secondNumber;
@@ -29,8 +29,8 @@ const getQuestionAndAnswer = () => {
     }
   }
 
-  const result = calc(operations, firstNumber, secondNumber);
-  const question = `${firstNumber} ${operations} ${secondNumber}`;
+  const result = calc(operation, firstNumber, secondNumber);
+  const question = `${firstNumber} ${operation} ${secondNumber}`;
   const correctAnswer = String(result);
   return [question, correctAnswer];
 };
