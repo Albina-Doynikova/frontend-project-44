@@ -3,34 +3,34 @@ import getRandomInRange from '../getRandomNumber.js';
 
 const description = 'What is the result of the expression?';
 
-const calc = (randomOperations, firstRandomNumber, secondRandomNumber) => {
-  switch (randomOperations) {
+const calc = (operations, firstNumber, secondNumber) => {
+  switch (operations) {
     case '+':
-      return firstRandomNumber + secondRandomNumber;
+      return firstNumber + secondNumber;
     case '-':
-      return firstRandomNumber - secondRandomNumber;
+      return firstNumber - secondNumber;
     case '*':
-      return firstRandomNumber * secondRandomNumber;
+      return firstNumber * secondNumber;
     default:
-      throw new Error(`Unknown operator: ${randomOperations}`);
+      throw new Error(`Unknown operator: ${operations}`);
   }
 };
 
 const getQuestionAndAnswer = () => {
-  let firstRandomNumber = getRandomInRange();
-  let secondRandomNumber = getRandomInRange();
-  const operations = ['+', '-', '*'];
-  const randomOperations = operations[getRandomInRange(0, operations.length - 1)];
-  if (randomOperations === '-') {
-    if (firstRandomNumber < secondRandomNumber) {
-      const temp = firstRandomNumber;
-      firstRandomNumber = secondRandomNumber;
-      secondRandomNumber = temp;
+  let firstNumber = getRandomInRange();
+  let secondNumber = getRandomInRange();
+  const operators = ['+', '-', '*'];
+  const operations = operators[getRandomInRange(0, operators.length - 1)];
+  if (operations === '-') {
+    if (firstNumber < secondNumber) {
+      const temp = firstNumber;
+      firstNumber = secondNumber;
+      secondNumber = temp;
     }
   }
 
-  const result = calc(randomOperations, firstRandomNumber, secondRandomNumber);
-  const question = `${firstRandomNumber} ${randomOperations} ${secondRandomNumber}`;
+  const result = calc(operations, firstNumber, secondNumber);
+  const question = `${firstNumber} ${operations} ${secondNumber}`;
   const correctAnswer = String(result);
   return [question, correctAnswer];
 };

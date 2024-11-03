@@ -18,9 +18,9 @@ const gcd = (a, b) => {
 const getQuestionAndAnswer = () => {
   const a = getRandomInRange();
   const b = getRandomInRange();
-  const randomNumbers = [a, b];
+  const operands = [a, b];
 
-  const question = randomNumbers.join(' ');
+  const question = operands.join(' ');
   const correctAnswer = String(gcd(a, b));
   return [question, correctAnswer];
 };
