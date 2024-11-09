@@ -17,8 +17,8 @@ const calc = (operation, firstNumber, secondNumber) => {
 };
 
 const getQuestionAndAnswer = () => {
-  let firstNumber = getRandomInRange();
-  let secondNumber = getRandomInRange();
+  const firstNumber = getRandomInRange();
+  const secondNumber = getRandomInRange();
   const operators = ['+', '-', '*'];
   const operation = operators[getRandomInRange(0, operators.length - 1)];
   const result = calc(operation, firstNumber, secondNumber);
