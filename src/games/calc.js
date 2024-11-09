@@ -21,14 +21,6 @@ const getQuestionAndAnswer = () => {
   let secondNumber = getRandomInRange();
   const operators = ['+', '-', '*'];
   const operation = operators[getRandomInRange(0, operators.length - 1)];
-  if (operation === '-') {
-    if (firstNumber < secondNumber) {
-      const temp = firstNumber;
-      firstNumber = secondNumber;
-      secondNumber = temp;
-    }
-  }
-
   const result = calc(operation, firstNumber, secondNumber);
   const question = `${firstNumber} ${operation} ${secondNumber}`;
   const correctAnswer = String(result);
